@@ -1,0 +1,265 @@
+<mvc:View
+ xmlns:feeds="sap.viz.ui5.controls.common.feeds"
+    xmlns:data="sap.viz.ui5.data"
+    xmlns:controls="sap.viz.ui5.controls"
+    xmlns:commons="sap.suite.ui.commons"
+    xmlns:f="sap.f"
+    xmlns:layout="sap.ui.layout" controllerName="dashboard.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core">
+    <Page id="page" title="{i18n>title}" showHeader="false">
+        <content>
+            <core:Fragment fragmentName="dashboard.fragment.mainHeader" type="XML"/>
+            <layout:Grid defaultSpan="XL6 L6 M12 S12" vSpacing="0">
+                <f:Card width="100%" height="270px" class="sapUiTinyMarginTop">
+                    <f:content>
+                        <commons:ChartContainer width="100%" id="firstPlantC_Id" showFullScreen="true" showLegendButton="false" showLegend="true" showZoom="false" contentChange="firstContainerCPress">
+                            <commons:customIcons>
+                                <core:Icon id="PlantWise_excel0" src="sap-icon://excel-attachment" visible="false" press="onExportPress"></core:Icon>
+
+                            </commons:customIcons>
+                            <commons:content>
+                                <commons:ChartContainerContent icon="sap-icon://vertical-stacked-chart">
+                                    <commons:content>
+                                        <controls:VizFrame vizType="column" id="Vizframe1" legendVisible="true" width="100%" height="230px">
+                                            <controls:dataset>
+                                                <data:FlattenedDataset data="{list>/plant}">
+                                                    <data:dimensions>
+                                                        <data:DimensionDefinition name="Plant Name" value="{list>palantName}"></data:DimensionDefinition>
+                                                    </data:dimensions>
+                                                    <data:measures>
+                                                        <data:MeasureDefinition name="Collection Amount" value="{list>Coll_Amount}"></data:MeasureDefinition>
+                                                    </data:measures>
+                                                </data:FlattenedDataset>
+                                            </controls:dataset>
+                                            <controls:feeds>
+                                                <feeds:FeedItem values="Collection Amount" uid="valueAxis" type="Measure"></feeds:FeedItem>
+                                                <feeds:FeedItem values="Plant Name" uid="categoryAxis" type="Dimension"></feeds:FeedItem>
+                                            </controls:feeds>
+                                        </controls:VizFrame>
+                                    </commons:content>
+                                </commons:ChartContainerContent>
+                                <commons:ChartContainerContent icon="sap-icon://table-view">
+                                    <commons:content>
+                                        <!-- <ScrollContainer vertical="true" horizontal="false"> -->
+                                        <Table id="PlantWiseTable_Id" items="{list>/plant}" sticky="ColumnHeaders">
+                                            <columns>
+                                                <Column >
+                                                    <Label text="Plant Name"></Label>
+                                                </Column>
+                                                <Column >
+                                                    <Label text="Collection Amount"></Label>
+                                                </Column>
+                                            </columns>
+                                            <items>
+                                                <ColumnListItem >
+                                                    <cells>
+                                                        <Text text="{list>palantName}"></Text>
+                                                        <Text text="{list>Coll_Amount}"></Text>
+                                                    </cells>
+                                                </ColumnListItem>
+                                            </items>
+                                        </Table>
+                                        <!-- </ScrollContainer> -->
+                                    </commons:content>
+                                </commons:ChartContainerContent>
+
+                            </commons:content>
+                        </commons:ChartContainer>
+                    </f:content>
+                </f:Card>
+                <f:Card width="100%" height="270px" class="sapUiTinyMarginTop">
+                    <f:content>
+                        <commons:ChartContainer width="100%" id="secondCustomerC_Id" showFullScreen="true" showLegendButton="false" showLegend="true" showZoom="false" contentChange="firstContainerCPress">
+                            <commons:customIcons>
+                                <core:Icon id="CustomerWise_excel" src="sap-icon://excel-attachment" visible="false" press="onExportPress"></core:Icon>
+
+                            </commons:customIcons>
+                            <commons:content>
+                                <commons:ChartContainerContent icon="sap-icon://vertical-stacked-chart">
+                                    <commons:content>
+                                        <controls:VizFrame vizType="column" id="Vizframe2" legendVisible="true" width="100%" height="230px">
+                                            <controls:dataset>
+                                                <data:FlattenedDataset data="{list>/cust}">
+                                                    <data:dimensions>
+                                                        <data:DimensionDefinition name="Customer Name" value="{list>customerName}"></data:DimensionDefinition>
+                                                    </data:dimensions>
+                                                    <data:measures>
+                                                        <data:MeasureDefinition name="Collection Amount" value="{list>CollAmount}"></data:MeasureDefinition>
+                                                    </data:measures>
+                                                </data:FlattenedDataset>
+                                            </controls:dataset>
+                                            <controls:feeds>
+                                                <feeds:FeedItem values="Collection Amount" uid="valueAxis" type="Measure"></feeds:FeedItem>
+                                                <feeds:FeedItem values="Customer Name" uid="categoryAxis" type="Dimension"></feeds:FeedItem>
+                                            </controls:feeds>
+                                        </controls:VizFrame>
+                                    </commons:content>
+                                </commons:ChartContainerContent>
+                                <commons:ChartContainerContent icon="sap-icon://table-view">
+                                    <commons:content>
+
+                                        <Table id="CustomerWiseTable_Id" items="{list>/cust}" sticky="ColumnHeaders">
+                                            <columns>
+                                                <Column >
+                                                    <Label text="Customer Name"></Label>
+                                                </Column>
+                                                <Column >
+                                                    <Label text="Collection Amount"></Label>
+                                                </Column>
+                                            </columns>
+                                            <items>
+                                                <ColumnListItem >
+                                                    <cells>
+                                                        <Text text="{list>customerName}"></Text>
+                                                        <Text text="{list>CollAmount}"></Text>
+                                                    </cells>
+                                                </ColumnListItem>
+                                            </items>
+                                        </Table>
+
+                                    </commons:content>
+                                </commons:ChartContainerContent>
+
+                            </commons:content>
+                        </commons:ChartContainer>
+                    </f:content>
+                </f:Card>
+                <f:Card width="100%" height="270px" class="sapUiTinyMarginTop">
+                    <f:content>
+                        <commons:ChartContainer width="100%" id="thirdProjectC_Id" showFullScreen="true" showLegendButton="false" showLegend="true" showZoom="false" contentChange="firstContainerCPress">
+                            <commons:dimensionSelectors>
+                                <Select selectedItem="P1" change="SelectProjectPress">
+                                    <core:Item text="P1" key="P1"></core:Item>
+                                    <core:Item text="P2" key="P2"></core:Item>
+                                    <core:Item text="P3" key="P3"></core:Item>
+                                    <core:Item text="P4" key="P4"></core:Item>
+                                    <core:Item text="P5" key="P5"></core:Item>
+                                </Select>
+                            </commons:dimensionSelectors>
+                            <commons:customIcons>
+                                <core:Icon id="ProjectWise_excel" src="sap-icon://excel-attachment" visible="false" press="onExportPress"></core:Icon>
+
+                            </commons:customIcons>
+                            <commons:content>
+                                <commons:ChartContainerContent icon="sap-icon://vertical-stacked-chart">
+                                    <commons:content>
+                                        <controls:VizFrame vizType="column" id="Vizframe3" legendVisible="true" width="100%" height="230px">
+                                            <controls:dataset>
+                                                <data:FlattenedDataset data="{path:'list>/Project',filters:[{path:'Proj',operator:'EQ', value1:'P1'}]}">
+                                                    <data:dimensions>
+                                                        <data:DimensionDefinition name="Customer Name" value="{list>ProjName}"></data:DimensionDefinition>
+                                                    </data:dimensions>
+                                                    <data:measures>
+                                                        <data:MeasureDefinition name="Collection Amount" value="{list>CollAmt}"></data:MeasureDefinition>
+                                                    </data:measures>
+                                                </data:FlattenedDataset>
+                                            </controls:dataset>
+                                            <controls:feeds>
+                                                <feeds:FeedItem values="Collection Amount" uid="valueAxis" type="Measure"></feeds:FeedItem>
+                                                <feeds:FeedItem values="Customer Name" uid="categoryAxis" type="Dimension"></feeds:FeedItem>
+                                            </controls:feeds>
+                                        </controls:VizFrame>
+                                    </commons:content>
+                                </commons:ChartContainerContent>
+                                <commons:ChartContainerContent icon="sap-icon://table-view">
+                                    <commons:content>
+
+                                        <Table id="TableProject_Id" items="{path:'list>/Project',filters:[{path:'Proj',operator:'EQ',value1:'P1'}]}" sticky="ColumnHeaders">
+                                            <columns>
+                                                <Column >
+                                                    <Label text="Customer Name"></Label>
+                                                </Column>
+                                                <Column >
+                                                    <Label text="Collection Amount"></Label>
+                                                </Column>
+                                            </columns>
+                                            <items>
+                                                <ColumnListItem >
+                                                    <cells>
+                                                        <Text text="{list>ProjName}"></Text>
+                                                        <Text text="{list>CollAmt}"></Text>
+                                                    </cells>
+                                                </ColumnListItem>
+                                            </items>
+                                        </Table>
+
+                                    </commons:content>
+                                </commons:ChartContainerContent>
+
+                            </commons:content>
+                        </commons:ChartContainer>
+                    </f:content>
+                </f:Card>
+                 <f:Card width="100%" height="270px" class="sapUiTinyMarginTop">
+                    <f:content>
+                        <commons:ChartContainer width="100%" id="fourSalesC_Id" showFullScreen="true" showLegendButton="false" showLegend="true" showZoom="false" contentChange="firstContainerCPress">
+                            <commons:dimensionSelectors>
+                                <Select selectedKey="S1" change="SelectSalesPress">
+                                    <core:Item text="S1" key="S1"></core:Item>
+                                    <core:Item text="S2" key="S2"></core:Item>
+                                    <core:Item text="S3" key="S3"></core:Item>
+                                    <core:Item text="S4" key="S4"></core:Item>
+                                </Select>
+                            </commons:dimensionSelectors>
+                            <commons:customIcons>
+                                <core:Icon id="SalesWise_excel" src="sap-icon://excel-attachment" visible="false" press="onExportPress"></core:Icon>
+
+                            </commons:customIcons>
+                            <commons:content>
+                                <commons:ChartContainerContent icon="sap-icon://vertical-stacked-chart">
+                                    <commons:content>
+                                        <controls:VizFrame vizType="column" id="Vizframe4" legendVisible="true" width="100%" height="230px">
+                                            <controls:dataset>
+                                                <data:FlattenedDataset data="{path:'list>/Sales',filters:[{path:'Sal',operator:'EQ', value1:'S1'}]}">
+                                                    <data:dimensions>
+                                                        <data:DimensionDefinition name="Customer Name" value="{list>SalName}"></data:DimensionDefinition>
+                                                    </data:dimensions>
+                                                    <data:measures>
+                                                        <data:MeasureDefinition name="Collection Amount" value="{list>CollAmt}"></data:MeasureDefinition>
+                                                    </data:measures>
+                                                </data:FlattenedDataset>
+                                            </controls:dataset>
+                                            <controls:feeds>
+                                                <feeds:FeedItem values="Collection Amount" uid="valueAxis" type="Measure"></feeds:FeedItem>
+                                                <feeds:FeedItem values="Customer Name" uid="categoryAxis" type="Dimension"></feeds:FeedItem>
+                                            </controls:feeds>
+                                        </controls:VizFrame>
+                                    </commons:content>
+                                </commons:ChartContainerContent>
+                                <commons:ChartContainerContent icon="sap-icon://table-view">
+                                    <commons:content>
+
+                                        <Table id="TableSales_Id" items="{path:'list>/Sales',filters:[{path:'Sal',operator:'EQ',value1:'S1'}]}" sticky="ColumnHeaders">
+                                            <columns>
+                                                <Column >
+                                                    <Label text="Customer Name"></Label>
+                                                </Column>
+                                                <Column >
+                                                    <Label text="Collection Amount"></Label>
+                                                </Column>
+                                            </columns>
+                                            <items>
+                                                <ColumnListItem >
+                                                    <cells>
+                                                        <Text text="{list>SalName}"></Text>
+                                                        <Text text="{list>CollAmt}"></Text>
+                                                    </cells>
+                                                </ColumnListItem>
+                                            </items>
+                                        </Table>
+
+                                    </commons:content>
+                                </commons:ChartContainerContent>
+
+                            </commons:content>
+                        </commons:ChartContainer>
+                    </f:content>
+                </f:Card>
+
+
+            </layout:Grid>
+        </content>
+    </Page>
+</mvc:View>

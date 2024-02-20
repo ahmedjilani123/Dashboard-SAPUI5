@@ -1,0 +1,221 @@
+{
+    "plant": [
+        {
+            "palantName": "p1",
+            "Coll_Amount": 34567832
+        },
+        {
+            "palantName": "p2",
+            "Coll_Amount": 43256789
+        },
+        {
+            "palantName": "p3",
+            "Coll_Amount": 55467893
+        },
+        {
+            "palantName": "p4",
+            "Coll_Amount": 45489032
+        },
+        {
+            "palantName": "p5",
+            "Coll_Amount": 54532178
+        },
+        {
+            "palantName": "p1",
+            "Coll_Amount": 234234234
+        },
+        {
+            "palantName": "p2",
+            "Coll_Amount": 234234544
+        },
+        {
+            "palantName": "p3",
+            "Coll_Amount": 5674564433
+        },
+        {
+            "palantName": "p4",
+            "Coll_Amount": 456456443
+        },
+        {
+            "palantName": "p5",
+            "Coll_Amount": 546464364
+        }
+    ],
+    "cust": [
+        {
+            "customerName": "Ahmed",
+            "CollAmount": 30008000
+        },
+        {
+            "customerName": "Zaid",
+            "CollAmount": 60756734
+        },
+        {
+            "customerName": "Dev",
+            "CollAmount": 33456231
+        },
+        {
+            "customerName": "Ramesh",
+            "CollAmount": 96543782
+        }
+    ],
+    "Project": [
+        {
+            "Proj": "P1",
+            "ProjName": "PO101",
+            "CollAmt": 94745600
+        },
+        {
+            "Proj": "P1",
+            "ProjName": "PO102",
+            "CollAmt": 64844560
+        },
+        {
+            "Proj": "P1",
+            "ProjName": "PO103",
+            "CollAmt": 43644560
+        },
+        {
+            "Proj": "P2",
+            "ProjName": "PO101",
+            "CollAmt": 54474560
+        },
+        {
+            "Proj": "P2",
+            "ProjName": "PO102",
+            "CollAmt": 94640560
+        },
+        {
+            "Proj": "P2",
+            "ProjName": "PO103",
+            "CollAmt": 97440560
+        },
+        {
+            "Proj": "P3",
+            "ProjName": "PO101",
+            "CollAmt": 35640560
+        },
+        {
+            "Proj": "P3",
+            "ProjName": "PO102",
+            "CollAmt": 85940560
+        },
+        {
+            "Proj": "P3",
+            "ProjName": "PO103",
+            "CollAmt": 45630500
+        },
+        {
+            "Proj": "P4",
+            "ProjName": "PO101",
+            "CollAmt": 94636300
+        },
+        {
+            "Proj": "P4",
+            "ProjName": "PO102",
+            "CollAmt": 67853500
+        },
+        {
+            "Proj": "P4",
+            "ProjName": "PO103",
+            "CollAmt": 94670500
+        },
+        {
+            "Proj": "P5",
+            "ProjName": "PO101",
+            "CollAmt": 67430000
+        },
+        {
+            "Proj": "P5",
+            "ProjName": "PO102",
+            "CollAmt": 50630500
+        },
+        {
+            "Proj": "P5",
+            "ProjName": "PO103",
+            "CollAmt": 25430500
+        }
+    ],
+    "Sales": [
+        {
+            "Sal": "S1",
+            "SalName": "Or01",
+            "CollAmt": 23460056
+        },
+        {
+            "Sal": "S1",
+            "SalName": "Or02",
+            "CollAmt": 26950494
+        },
+        {
+            "Sal": "S1",
+            "SalName": "Or03",
+            "CollAmt": 65893095
+        },
+        {
+            "Sal": "S1",
+            "SalName": "Or04",
+            "CollAmt": 75849039
+        },
+        {
+            "Sal": "S2",
+            "SalName": "Or11",
+            "CollAmt": 87485854
+        },
+        {
+            "Sal": "S2",
+            "SalName": "Or12",
+            "CollAmt": 43738833
+        },
+        {
+            "Sal": "S2",
+            "SalName": "Or13",
+            "CollAmt": 93635534
+        },
+        {
+            "Sal": "S2",
+            "SalName": "Or14",
+            "CollAmt": 89595555
+        },
+        {
+            "Sal": "S3",
+            "SalName": "Or31",
+            "CollAmt": 45460785
+        },
+        {
+            "Sal": "S3",
+            "SalName": "Or32",
+            "CollAmt": 20467600
+        },
+        {
+            "Sal": "S3",
+            "SalName": "Or33",
+            "CollAmt": 23506005
+        },
+        {
+            "Sal": "S3",
+            "SalName": "Or34",
+            "CollAmt": 22346001
+        },
+        {
+            "Sal": "S4",
+            "SalName": "Or41",
+            "CollAmt": 43060045
+        },
+        {
+            "Sal": "S4",
+            "SalName": "Or42",
+            "CollAmt": 23462023
+        },
+        {
+            "Sal": "S4",
+            "SalName": "Or43",
+            "CollAmt": 67890432
+        },
+        {
+            "Sal": "S4",
+            "SalName": "Or44",
+            "CollAmt": 29087654
+        }
+    ]
+}

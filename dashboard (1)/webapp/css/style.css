@@ -1,0 +1,8 @@
+/* Enter your custom styles here */
+.homeTitle {
+    /*background: linear-gradient(90deg, #e3ffe7 0%, #d9e7ff 100%)!important;*/
+    background-image: linear-gradient(90deg, rgba(238, 238, 255, 1) 0%, rgba(195, 245, 255, 1) 100%)!important;
+    border-top: 3px solid !important;
+    border-bottom: 3px solid !important;
+    border-image: linear-gradient(to right, SteelBlue, orchid) 1 !important;
+}

@@ -1,0 +1,34 @@
+<core:FragmentDefinition xmlns:viz="sap.viz.ui5.controls" xmlns:layout="sap.ui.layout" xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc"
+	xmlns:u="sap.suite.ui.commons" xmlns:card="sap.f.cards" xmlns:f="sap.f" xmlns:grid="sap.ui.layout.cssgrid"
+	xmlns:viz.feeds="sap.viz.ui5.controls.common.feeds" xmlns:viz.data="sap.viz.ui5.data" xmlns:uit="sap.ui.table" xmlns:un="sap.ui.unified"
+	xmlns:tnt="sap.tnt" xmlns="sap.m">
+	<layout:Grid class="homeTitle" width="100%" hSpacing="0" vSpacing="0">
+		<HBox justifyContent="SpaceBetween" alignContent="Center" alignItems="Center">
+			<layoutData>
+				<layout:GridData span="XL1 L1 M2 S12"></layout:GridData>
+			</layoutData>
+			<VBox height="4rem" justifyContent="Center" alignContent="Center" alignItems="Center">
+				<Image src="./Images/login.png" height="3rem"></Image>
+			</VBox>
+		</HBox>
+		<HBox wrap="Wrap" justifyContent="Center" alignContent="Center" alignItems="Center">
+			<layoutData>
+				<layout:GridData indent="XL1 L1 M7 S0" span="XL8 L8 M3 S12"></layout:GridData>
+			</layoutData>
+			
+			<VBox justifyContent="Center" class="sapUiTinyMargin" alignContent="Center" alignItems="Center">
+				<ObjectNumber class="sapMObjectNumberLarge" number="Dashboard"  state="Success"/>
+				<Label text="Sales and Distribution-Master"></Label>
+			</VBox>
+		</HBox>
+		<HBox justifyContent="Center">
+			<layoutData>
+				<layout:GridData span="XL2 L2 M12 S12"></layout:GridData>
+			</layoutData>
+			<VBox justifyContent="Center" class="sapUiTinyMarginTop">
+					<ObjectNumber id="date2" class="sapMObjectNumberLarge sapUiTinyMarginTop" number="" emphasized="false" state="Warning"/>
+			</VBox>
+		</HBox>
+	</layout:Grid>
+	<!--</HBox>-->
+</core:FragmentDefinition>
