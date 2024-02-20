@@ -1,7 +1,12 @@
 # Dashboard-SAPUI5
 <h1>Application View </h1>
-<h2>Main Page to show all detail</h2><br><br>
- ProjectWise Collection </br> CustomerWise Collection </br> PlantWise Collection </br>SaleWise Collection
+<h2>Main Page to show all detail</h2>
+<ul start="circle">
+<li>ProjectWise Collection</li>
+<li>CustomerWise Collection</li>
+<li>PlantWise Collection </li>
+<li>SaleWise Collection</li>
+</ul>
 <img src="./Images/Main.png" alt="Second Page" width="700" height="400">
 <h2>Show Table Plant Name and Collection Amount </h2>
 <img src="./Images/ViewTableSection.png" alt="Second Page" width="700" height="400">
